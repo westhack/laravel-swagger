@@ -1,0 +1,30 @@
+{
+    "name": "westhack/laravel-swagger",
+    "description": "Laravel swagger ui",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "westhack",
+            "email": "westhack@limaopu.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Westhack\\LaravelSwagger\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Westhack\\LaravelSwagger\\Providers\\SwaggerServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
