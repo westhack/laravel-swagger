@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/swagger', 'Swagger\SwaggerController@index');
+Route::get('/swagger', '\Westhack\LaravelSwagger\Controllers\SwaggerController@index');
 
-Route::get('/api/swagger', 'Swagger\SwaggerApiController@index');
+Route::get('/api/swagger', '\Westhack\LaravelSwagger\Controllers\SwaggerApiController@index');
 

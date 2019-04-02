@@ -46,7 +46,7 @@ class SwaggerServiceProvider extends ServiceProvider
         ], 'laravelswagger');
 
         $this->publishes([
-            __DIR__.'/../assets' => public_path('swagger'),
+            __DIR__.'/../assets' => public_path('assets/swagger'),
         ], 'laravelswagger');
 
         $this->publishes([

@@ -3,6 +3,8 @@
 namespace Westhack\LaravelSwagger\Controllers;
 
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Http\Response;
 
 class SwaggerApiController extends Controller
 {
@@ -48,9 +50,9 @@ class SwaggerApiController extends Controller
         $this->clearCache();
 
         if ($this->enableCache) {
-            if (($swagger = Cache::get($this->cacheKey)) === false) {
+            if (($swagger = $this->cache->get($this->cacheKey)) === false) {
                 $swagger = $this->getSwagger();
-                Cache::put($this->cacheKey, $swagger);
+                $this->cache->put($this->cacheKey, $swagger);
             }
         } else {
             $swagger = $this->getSwagger();
@@ -75,7 +77,7 @@ class SwaggerApiController extends Controller
     {
         $clearCache = request('clear-cache', false);
         if ($clearCache !== false) {
-            Cache::forget($this->cacheKey);
+            $this->cache->forget($this->cacheKey);
         }
     }
 
