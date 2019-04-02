@@ -1,4 +1,4 @@
-# laravel-swagger | A Web Installer [Package](https://packagist.org/packages/westhack/laravel-swagger)
+# laravel-swagger | Swagger UI [Package](https://packagist.org/packages/westhack/laravel-swagger)
 
 - [About](#about)
 - [Requirements](#requirements)
